@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YoMoto</title>
+    <style>
+        /* marginele saitului,imagine este peste intreaga pagina */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+            color: #fff;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: rgba(0, 0, 0, 0);
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+        }
+       /*logoul-YOMOTO*/
+        .navbar .logo {
+            font-family: Arial;
+            font-size: 24px;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin: 0 15px;
+        }
+
+        .navbar ul li a {
+            font-family: Arial;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .submit-listing {
+            font-family: Arial;
+            padding: 10px 20px;
+            background-color: #fff;
+            color: #333;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background-image: url('src/DALL·E\ 2024-10-30\ 14.16.50\ -\ A\ wide\,\ distant\ view\ of\ a\ motorcyclist\ riding\ a\ sleek\ Yamaha\ motorcycle\ in\ blue\ color\,\ moving\ down\ a\ winding\ road.\ The\ motorcycle\ and\ rider\ are\ seen\ f.webp'); /* Adaugă calea corectă către imaginea de fundal */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.2); /* Suprapunere semi-transparentă */
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-family: Arial;
+            font-size: 40px;
+            margin-bottom: 10px;
+            color: rgb(255, 255, 255);
+        }
+
+        .hero p {
+            font-family: Arial;
+            font-size: 13px;
+            margin-bottom: 30px;
+            color: rgb(255, 255, 255);
+        }
+
+        /* Search Form */
+        .search-form {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            background: rgb(0, 0, 0, 0.5);
+            padding: 15px 20px;
+            border-radius: 30px;
+        }
+
+        .search-form select, .search-form .search-button {
+            font-family: Arial;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .search-form select {
+            background: #f0f0f0;
+        }
+
+        .search-form .search-button {
+            background-color: #3142b3;
+            color: white;
+            cursor: pointer;
+            padding: 10px 20px;
+        }
+
+        select option:first-child {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">YOMOTO</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Abaut As</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Sign In</a></li>
+            </ul>
+        </nav>
+        <button class="submit-listing">Submit Listing</button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Find Your Perfect Motorcycle</h1>
+            <p>Find motorcycles for sale and for rent near you</p>
+            
+            <!-- Search Form -->
+            <div class="search-form">
+                <select>
+                    <option>Any Models</option>
+                    <option>Toyota</option>
+                    <option>Ford</option>
+                </select>
+                <select>
+                    <option>Equipment</option>
+                    <option>Corolla</option>
+                    <option>Mustang</option>
+                </select>
+                <select>
+                    <option>Any Years</option>
+                    <option>2020</option>
+                    <option>2021</option>
+                </select>
+                <select>
+                    <option>All Prices</option>
+                    <option>Under $20,000</option>
+                    <option>Under $30,000</option>
+                </select>
+                <button class="search-button">Search Cars</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
